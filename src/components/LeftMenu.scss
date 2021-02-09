@@ -1,0 +1,58 @@
+@import '../styles/colors';
+
+.LeftMenu {
+    margin-top: 20px;
+
+    .Entry {
+        width: 100%;
+        padding: 20px 0 20px 95px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+
+        color: #8DA1B5;
+        text-align: left;
+
+        &:after {
+            content: '';
+
+            position: absolute;
+            right: 0;
+            top: 20%;
+
+            height: 60%;
+            width: 3px;
+
+            background-color: transparent;
+            transition: background-color 100ms linear;
+        }
+
+        &.selected {
+            font-weight: bold;
+            color: black;
+        }
+
+        &.selected:after {
+            background-color: $secondary-color;
+        }
+
+        i {
+            margin-right: 11px;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+
+            width: 200px;
+
+            transition: width 100ms ease;
+
+            &.short {
+                width: 0;
+            }
+        }
+    }
+}

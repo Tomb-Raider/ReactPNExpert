@@ -1,0 +1,47 @@
+@import '../styles/colors';
+
+.FloatingDrawerLeft {
+    height: 100vh;
+    width: 300px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    background-color: white;
+    border-right: 1px solid $border-color;
+
+    .controls {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+
+        padding: 3px;
+
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        button {
+            padding: 0;
+
+            // as for any other materialize-css FAB
+            line-height: 40px;
+            height: 40px;
+            width: 40px;
+
+            border-radius: 50%;
+        }
+    }
+
+    transition: left 100ms ease;
+
+    &.closed {
+        left: calc(-300px + 40px + 6px);
+    }
+}
