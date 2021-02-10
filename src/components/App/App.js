@@ -1,16 +1,25 @@
 import { Component } from 'react'
 import logo from '../../images/logo.svg'
 import './App.scss'
-import FloatingDrawerLeft from '../FloatingDrawer/FloatingDrawerLeft'
+import FloatingDrawer from '../FloatingDrawer/FloatingDrawer'
 import LogoWithTitle from '../LogoWithTitle/LogoWithTitle'
 import LeftMenu from '../LeftMenu/LeftMenu'
+import IconWith2Titles from '../IconWith2Titles/IconWith2Titles'
+import nika from '../../images/nika.png'
 
 export default function App() {
 	return (
 		<div className="App">
-			<FloatingDrawerLeft
+			<FloatingDrawer
 				header={LogoWithTitle}
 				content={LeftMenu}
+				side="left"
+			/>
+
+			<FloatingDrawer
+				header={_ => <IconWith2Titles icon={nika} upper="Вероника Малышева" lower="Санкт-Петербург" />}
+				side="right"
+				toggleIcon="segment"
 			/>
 
 			<header className="App-header">

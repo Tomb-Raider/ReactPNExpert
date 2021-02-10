@@ -1,19 +1,19 @@
 @import '../../styles/colors';
 
-.FloatingDrawerLeft {
+.FloatingDrawer {
     height: 100vh;
     width: 300px;
 
     position: absolute;
-    left: 0;
-    top: 0;
+    // left: 0;
+    // top: 0;
 
     background-color: white;
-    border-right: 1px solid $border-color;
+    // border-right: 1px solid $border-color;
 
     .controls {
         display: flex;
-        flex-direction: row;
+        // flex-direction: row;
         justify-content: space-between;
         align-items: center;
 
@@ -39,9 +39,47 @@
         }
     }
 
+    // transition: left 100ms ease;
+
+    // &.closed {
+    //     left: calc(-300px + 40px + 6px);
+    // }
+}
+
+.FloatingDrawerLeft {
+    @extend .FloatingDrawer;
+
+    left: 0;
+    top: 0;
+
+    border-right: 1px solid $border-color;
+
+    .controls {
+        flex-direction: row;
+    }
+
     transition: left 100ms ease;
 
     &.closed {
         left: calc(-300px + 40px + 6px);
+    }
+}
+
+.FloatingDrawerRight {
+    @extend .FloatingDrawer;
+
+    right: 0;
+    top: 0;
+
+    border-left: 1px solid $border-color;
+
+    .controls {
+        flex-direction: row-reverse;
+    }
+
+    transition: right 100ms ease;
+
+    &.closed {
+        right: calc(-300px + 40px + 6px);
     }
 }

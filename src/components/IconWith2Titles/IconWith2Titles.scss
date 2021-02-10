@@ -1,0 +1,29 @@
+.IconWith2Titles {
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img {
+        width: 60px;
+        height: 60px;
+        border-radius: 11px;
+    }
+
+    .titles {
+        margin-left: 10px;
+
+        flex-basis: 100%;
+        text-align: left;
+
+        .upper {
+            color: black;
+            font-weight: bold;
+        }
+
+        .lower {
+            color: gray;
+        }
+    }
+}

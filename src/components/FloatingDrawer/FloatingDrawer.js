@@ -1,20 +1,10 @@
 import { React, Component } from 'react'
-import './FloatingDrawerLeft.scss'
+import './FloatingDrawer.scss'
 
-export default class FloatingDrawerLeft extends Component {
+export default class FloatingDrawer extends Component {
     state = {
         open: true
     }
-
-    // toggleButton = React.createRef()
-
-    // constructor(props) {
-    //     super(props)
-
-    //     this.state = {
-    //         open: true
-    //     }
-    // }
 
     toggle = () => {
         this.setState(old => {
@@ -30,17 +20,20 @@ export default class FloatingDrawerLeft extends Component {
 
         const isClosed = this.state.open ? '' : 'closed'
 
+        const side = this.props.side == 'right' ? 'Right' : 'Left'
+
+        const toggleIcon = this.props.toggleIcon || 'menu'
+
         return (
-            <div className={'FloatingDrawerLeft ' + isClosed}>
+            <div className={`FloatingDrawer${side} ${isClosed}`}>
                 <Header isDrawerOpen={this.state.open} />
                 <div className="controls">
                     <p></p>
                     <button
                         className="btn-flat waves-effect waves-dark text-black"
                         onClick={this.toggle}
-                        // ref={this.toggleButton}
                     >
-                        <i className="material-icons">menu</i>
+                        <i className="material-icons">{toggleIcon}</i>
                     </button>
                 </div>
                 <Content isDrawerOpen={this.state.open} />
