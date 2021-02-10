@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './styles/index.scss'
-import App from './components/App'
+import App from './components/App/App'
 import reportWebVitals from './reportWebVitals'
 import M from 'materialize-css'
 

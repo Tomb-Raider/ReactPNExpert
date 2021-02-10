@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import './LogoWithTitle.scss'
-import logo from '../images/logo.svg'
+import logo from '../../images/logo.svg'
 
 export default class LogoWithTitle extends Component {
     render() {

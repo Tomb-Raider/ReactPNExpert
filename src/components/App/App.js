@@ -1,10 +1,9 @@
 import { Component } from 'react'
-import logo from './../images/logo.svg'
+import logo from '../../images/logo.svg'
 import './App.scss'
-import './FloatingDrawerLeft'
-import FloatingDrawerLeft from './FloatingDrawerLeft'
-import LogoWithTitle from './LogoWithTitle'
-import LeftMenu from './LeftMenu'
+import FloatingDrawerLeft from '../FloatingDrawer/FloatingDrawerLeft'
+import LogoWithTitle from '../LogoWithTitle/LogoWithTitle'
+import LeftMenu from '../LeftMenu/LeftMenu'
 
 export default function App() {
 	return (
@@ -18,7 +17,7 @@ export default function App() {
 				<img src={logo} className="App-logo" alt="logo" />
 				<p>
 					Edit <code>src/App.js</code> and save to reload.
-					</p>
+				</p>
 				<a
 					className="App-link"
 					href="https://reactjs.org"
@@ -26,7 +25,7 @@ export default function App() {
 					rel="noopener noreferrer"
 				>
 					Learn React
-					</a>
+				</a>
 			</header>
 		</div>
 	)
