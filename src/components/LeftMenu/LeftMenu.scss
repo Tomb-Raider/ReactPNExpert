@@ -15,7 +15,7 @@
         color: #8DA1B5;
         text-align: left;
 
-        &:after {
+        &:not(.collapser):after {
             content: '';
 
             position: absolute;
@@ -54,5 +54,44 @@
                 width: 0;
             }
         }
+
+        &.nested {
+            p {
+                width: 140px;
+
+                &.short {
+                    width: 0;
+                }
+            }
+        }
+
+        &.collapser::before {
+            content: '+';
+
+            position: absolute;
+            right: 210px;
+            top: 50%;
+
+            font-size: 1.4em;
+            font-weight: bold;
+
+            transform: translateY(-55%);
+            transition: transform 100ms ease;
+        }
+
+        &.collapser.open::before {
+            // content: '-';
+            transform: translateY(-55%) rotateZ(45deg);
+        }
+    }
+
+    .collapsable {
+        max-height: 0px;
+        transition: max-height 200ms ease;
+        overflow: hidden;
+    }
+
+    .collapsable.open {
+        max-height: 100vh;
     }
 }

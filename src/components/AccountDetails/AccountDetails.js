@@ -1,14 +1,14 @@
 import { Component } from 'react'
-import './IconWith2Titles.scss'
+import './AccountDetails.scss'
 
-export default class IconWith2Titles extends Component {
+export default class AccountDetails extends Component {
     render() {
         const icon = this.props.icon || 'none'
         const upper = this.props.upper || 'Upper'
         const lower = this.props.lower || 'Lower'
 
         return (
-            <div className="IconWith2Titles">
+            <div className={'AccountDetails ' + (!this.props.isDrawerOpen ? 'short' : '')}>
                 <img src={icon} />
                 <div className="titles">
                     <div className="upper">{upper}</div>

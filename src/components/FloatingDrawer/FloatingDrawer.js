@@ -3,10 +3,14 @@ import './FloatingDrawer.scss'
 
 export default class FloatingDrawer extends Component {
     state = {
-        open: true
+        open: this.props.localStorageKey !== undefined ? JSON.parse(localStorage.getItem(this.props.localStorageKey + '_open')) : true
     }
 
     toggle = () => {
+        if (this.props.localStorageKey) {
+            localStorage.setItem(this.props.localStorageKey + '_open', !this.state.open)
+        }
+
         this.setState(old => {
             return {
                 open: !old.open

@@ -4,8 +4,8 @@ import './App.scss'
 import FloatingDrawer from '../FloatingDrawer/FloatingDrawer'
 import LogoWithTitle from '../LogoWithTitle/LogoWithTitle'
 import LeftMenu from '../LeftMenu/LeftMenu'
-import IconWith2Titles from '../IconWith2Titles/IconWith2Titles'
-import nika from '../../images/nika.png'
+import ActivitiesList from '../ActivitiesList/ActivitiesList'
+import AccountDetailsContainer from '../AccountDetails/AccountDetailsContainer'
 
 export default function App() {
 	return (
@@ -14,12 +14,15 @@ export default function App() {
 				header={LogoWithTitle}
 				content={LeftMenu}
 				side="left"
+				localStorageKey="left_drawer"
 			/>
 
 			<FloatingDrawer
-				header={_ => <IconWith2Titles icon={nika} upper="Вероника Малышева" lower="Санкт-Петербург" />}
+				header={props => <AccountDetailsContainer isDrawerOpen={props.isDrawerOpen} />}
+				content={ActivitiesList}
 				side="right"
 				toggleIcon="segment"
+				localStorageKey="right_drawer"
 			/>
 
 			<header className="App-header">
