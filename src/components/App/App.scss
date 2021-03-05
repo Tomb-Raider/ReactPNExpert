@@ -1,3 +1,5 @@
+@import '../../styles/colors';
+
 html, body {
 	margin: 0;
 	padding: 0;
@@ -34,20 +36,58 @@ html, body {
 
 	// width: calc(100vw - 92px);
 	// overflow: auto;
+
+	transition: left 100ms ease;
 }
 
 .content {
 	// max-width: 800px;
 	// width: calc(100vw - 640px);
 
-	// inner scrollbars for the article
-	overflow: auto;
-
 	flex-basis: 100%;
 
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+	// align-items: center;
+
+	.controls {
+		width: 100%;
+		padding: 3px;
+		border-bottom: 1px solid $border-color;
+
+		// only visible on mobile
+		display: none;
+		flex-direction: row;
+		justify-content: space-between;
+
+		p {
+			padding: 0;
+            margin: 0;
+		}
+
+		button {
+			padding: 0;
+
+            // as for any other materialize-css FAB
+            line-height: 40px;
+            height: 40px;
+            width: 40px;
+
+            border-radius: 50%;
+		}
+	}
+}
+
+.feed-wrapper {
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+	height: 100%;
+
+	// inner scrollbars for the article
+	overflow: auto;
 }
 
 .feed {
@@ -56,13 +96,23 @@ html, body {
 }
 
 @media (max-width: 1200px) {
-	.feed {
-		flex-basis: calc(100% - 20px);
-	}
-
 	.space {
 		left: -300px;
 		width: calc(100vw + 2*300px);
+
+		&.left {
+			left: 0;
+		}
+
+		&.right {
+			left: -600px;
+		}
+	}
+
+	.content {
+		.controls {
+			display: flex;
+		}
 	}
 }
 
