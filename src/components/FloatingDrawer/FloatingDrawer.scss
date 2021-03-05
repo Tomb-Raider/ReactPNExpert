@@ -1,12 +1,13 @@
 @import '../../styles/colors';
 
 .FloatingDrawer {
-    height: 100vh;
+    // height: 100vh;
     width: 300px;
 
     position: fixed;
     // left: 0;
-    // top: 0;
+    top: 0;
+    bottom: 0;
 
     background-color: white;
     // border-right: 1px solid $border-color;
@@ -55,7 +56,6 @@
     @extend .FloatingDrawer;
 
     left: 0;
-    top: 0;
     z-index: 1;
 
     border-right: 1px solid $border-color;
@@ -75,7 +75,6 @@
     @extend .FloatingDrawer;
 
     right: 0;
-    top: 0;
     z-index: 2;
 
     border-left: 1px solid $border-color;

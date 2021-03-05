@@ -4,7 +4,7 @@
 .LeftMenu {
     @include scrollbarless;
 
-    margin-top: 20px;
+    padding-top: 20px;
 
     .Entry {
         width: 100%;
