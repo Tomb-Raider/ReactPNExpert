@@ -1,6 +1,9 @@
 @import '../../styles/colors';
+@import '../../styles/helpers';
 
 .LeftMenu {
+    @include scrollbarless;
+
     margin-top: 20px;
 
     .Entry {

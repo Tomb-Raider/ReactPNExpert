@@ -8,7 +8,7 @@ const LEFT_DRAWER = 'LEFT_DRAWER'
 const RIGHT_DRAWER = 'RIGHT_DRAWER'
 
 const initialState = {
-    open: true
+    open: window.innerWidth > 1300
 }
 
 class DrawerStateManager {
@@ -38,7 +38,7 @@ class DrawerStateManager {
             case CLOSE + this.side:
                 return {
                     ...state,
-                    close: false,
+                    open: false,
                 }
             case TOGGLE + this.side:
                 return {

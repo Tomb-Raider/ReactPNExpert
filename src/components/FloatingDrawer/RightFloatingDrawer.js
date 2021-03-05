@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import FloatingDrawer from './FloatingDrawer'
-import {right_drawer} from '../../reducers/drawers'
+import {left_drawer, right_drawer} from '../../reducers/drawers'
 
 const mapStateToProps = (state) => {
     return {
@@ -11,7 +11,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        toggle: () => dispatch(right_drawer.toggleAC())
+        toggle: () => {
+            if (window.innerWidth < 600) {
+                dispatch(left_drawer.closeAC())
+            }
+            dispatch(right_drawer.toggleAC())
+        }
     }
 }
 
