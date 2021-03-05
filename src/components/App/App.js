@@ -1,7 +1,8 @@
 import { Component } from 'react'
 import logo from '../../images/logo.svg'
 import './App.scss'
-import FloatingDrawer from '../FloatingDrawer/FloatingDrawer'
+import LeftFloatingDrawer from '../FloatingDrawer/LeftFloatingDrawer'
+import RightFloatingDrawer from '../FloatingDrawer/RightFloatingDrawer'
 import LogoWithTitle from '../LogoWithTitle/LogoWithTitle'
 import LeftMenu from '../LeftMenu/LeftMenu'
 import ActivitiesList from '../ActivitiesList/ActivitiesList'
@@ -10,19 +11,15 @@ import AccountDetailsContainer from '../AccountDetails/AccountDetailsContainer'
 export default function App() {
 	return (
 		<div className="App">
-			<FloatingDrawer
+			<LeftFloatingDrawer
 				header={LogoWithTitle}
 				content={LeftMenu}
-				side="left"
-				localStorageKey="left_drawer"
 			/>
 
-			<FloatingDrawer
+			<RightFloatingDrawer
 				header={props => <AccountDetailsContainer isDrawerOpen={props.isDrawerOpen} />}
 				content={ActivitiesList}
-				side="right"
 				toggleIcon="segment"
-				localStorageKey="right_drawer"
 			/>
 
 			<header className="App-header">

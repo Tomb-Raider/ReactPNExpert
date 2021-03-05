@@ -100,7 +100,7 @@ export default class LeftMenu extends Component {
     }
 
     state = {
-        selected: 'account',
+        selected: 'news',
     }
 
     constructor(props) {
