@@ -1,11 +1,13 @@
 import { connect } from 'react-redux'
-import FloatingDrawer from './FloatingDrawer'
+import ExpandingDrawer from './ExpandingDrawer'
 import {left_drawer, right_drawer} from '../../reducers/drawers'
 
 const mapStateToProps = (state) => {
     return {
         open: state.drawers.left.open,
         side: 'left',
+        innerWidth: state.temporary.windowSize.width,
+        innerHeight: state.temporary.windowSize.height,
     }
 }
 
@@ -20,4 +22,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(FloatingDrawer)
+export default connect(mapStateToProps, mapDispatchToProps)(ExpandingDrawer)

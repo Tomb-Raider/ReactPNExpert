@@ -1,0 +1,89 @@
+@import '../../styles/colors';
+
+.ExpandingDrawer {
+    height: 100vh;
+    width: 300px;
+
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    position: relative;
+
+    transition: width 100ms ease;
+
+    &.closed {
+        width: 46px;
+    }
+}
+
+.Contents {
+    width: 300px;
+
+    position: absolute;
+    bottom: 0;
+    top: 0;
+
+    background-color: white;
+    // border-right: 1px solid $border-color;
+
+    // make menu's contents
+    // scrollable
+    display: flex;
+    flex-direction: column;
+
+    .controls {
+        display: flex;
+        // flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+
+        padding: 3px;
+
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        button {
+            padding: 0;
+
+            // as for any other materialize-css FAB
+            line-height: 40px;
+            height: 40px;
+            width: 40px;
+
+            border-radius: 50%;
+        }
+
+        &.mobile {
+            display: none;
+        }
+    }
+}
+
+.ContentsLeft {
+    @extend .Contents;
+
+    border-right: 1px solid $border-color;
+
+    right: 0;
+
+    .controls {
+        flex-direction: row;
+    }
+}
+
+.ContentsRight {
+    @extend .Contents;
+
+    border-left: 1px solid $border-color;
+
+    left: 0;
+
+    .controls {
+        flex-direction: row-reverse;
+    }
+}

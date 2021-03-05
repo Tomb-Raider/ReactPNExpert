@@ -149,7 +149,7 @@ export default class LeftMenu extends Component {
             if (typeof that.action == 'function') {
                 return (
                     <Entry
-                        key={key}
+                        key={prefix + '_' + key}
                         title={that.title}
                         selected={this.state.selected == key}
                         icon={that.icon}
@@ -163,9 +163,8 @@ export default class LeftMenu extends Component {
             const [innerOptions, innerSelected] = this.collectEntries(that.action, prefix + '_' + key)
 
             return (
-                <div>
+                <div key={prefix + '_' + key}>
                     <Entry
-                        key={key}
                         title={that.title}
                         selected={this.state.selected == key || innerSelected}
                         icon={that.icon}
