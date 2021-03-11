@@ -8,6 +8,8 @@ import AccountDetailsContainer from '../AccountDetails/AccountDetailsContainer'
 import Page from '../Page/Page'
 import {Switch, Route} from 'react-router-dom'
 
+import MainView from '../views/MainView'
+
 export default function App(props) {
 	let shift = ''
 
@@ -43,7 +45,7 @@ export default function App(props) {
 					</div>
 
 					<Switch>
-						<Route path='/'>
+						<Route path="/account">
 							<Page>
 								<p className="flow-text">
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mi leo, faucibus id lectus eget, luctus gravida enim. Suspendisse libero risus, efficitur eget ipsum cursus, tincidunt semper risus. Aenean suscipit faucibus ante, elementum faucibus libero condimentum sit amet. Aliquam ante lacus, tristique in nibh in, iaculis suscipit leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus rutrum suscipit laoreet. Aliquam erat volutpat. Donec maximus quam nec auctor volutpat.
@@ -56,6 +58,16 @@ export default function App(props) {
 
 									Donec vitae enim quis lectus ultrices ultrices at vitae dui. Suspendisse a mi urna. Nulla convallis velit vel tortor interdum, eget molestie metus fermentum. Sed aliquet tempus libero, id malesuada sapien. In hac habitasse platea dictumst. Cras massa mi, condimentum non nisi sed, fermentum eleifend eros. Etiam sagittis malesuada ipsum, sit amet feugiat risus luctus eu. Proin eget nibh non ligula vehicula efficitur.
 								</p>
+							</Page>
+						</Route>
+						<Route path="/main">
+							<Page>
+								<MainView />
+							</Page>
+						</Route>
+						<Route path="/">
+							<Page>
+								<MainView />
 							</Page>
 						</Route>
 					</Switch>

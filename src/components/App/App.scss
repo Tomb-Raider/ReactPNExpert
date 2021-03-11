@@ -9,6 +9,10 @@ html, body {
 	box-sizing: border-box;
 }
 
+body {
+	background-color: $background-color;
+}
+
 .App {
 	height: 100vh;
 	position: relative;
@@ -60,6 +64,8 @@ html, body {
 		display: none;
 		flex-direction: row;
 		justify-content: space-between;
+
+		background-color: white;
 
 		p {
 			padding: 0;
