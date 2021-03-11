@@ -50,6 +50,7 @@
             margin: 0;
 
             // width: 200px;
+            flex-shrink: 0;
 
             transition: width 100ms ease;
         }
@@ -57,20 +58,20 @@
         &.collapser::before {
             content: '+';
 
-            position: absolute;
-            right: 210px;
+            position: relative;
+            right: 10px;
             top: 50%;
 
             font-size: 1.4em;
             font-weight: bold;
 
-            transform: translateY(-55%);
+            transform: translateY(-10%);
             transition: transform 100ms ease;
         }
 
         &.collapser.open::before {
             // content: '-';
-            transform: translateY(-55%) rotateZ(45deg);
+            transform: translateY(-10%) rotateZ(45deg);
         }
     }
 

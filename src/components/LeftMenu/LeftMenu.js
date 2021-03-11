@@ -13,7 +13,7 @@ class Entry extends Component {
         const isOpen = this.props.open && isCollapser ? 'open' : ''
 
         const level = this.props.level || 0
-        const indent = this.props.short ? 0 : 200 - level * 60
+        const indent = this.props.short ? 0 : 168 - level * 20
 
         return (
             <div
@@ -92,6 +92,8 @@ class LeftMenu extends Component {
             }
 
             const [innerOptions, innerSelected] = this.collectEntries(that.action, full_key, level + 1)
+
+            selected = selected || innerSelected
 
             return (
                 <div key={full_key}>

@@ -1,49 +1,59 @@
 export const PAGES = {
+    main: {
+        icon: 'date_range',
+        title: 'Главная',
+    },
+    goals: {
+        icon: 'task_alt',
+        title: 'Задачи',
+    },
     account: {
         icon: 'account_circle',
         title: 'Аккаунт',
     },
-    news: {
-        icon: 'dashboard',
-        title: 'Новости',
-    },
     activities: {
-        icon: 'date_range',
+        icon: 'dashboard',
         title: 'Активности',
         action: {
             videos: {
-                icon: 'dashboard',
+                icon: 'video_camera_front',
                 title: 'Видео',
             },
             surveys: {
-                icon: 'dashboard',
+                icon: 'question_answer',
                 title: 'Опросы',
+                action: {
+                    statistics: {
+                        icon: 'supervisor_account',
+                        title: 'Человеки',
+                    },
+                    best: {
+                        icon: 'favorite_border',
+                        'title': 'Любимое',
+                    }
+                }
             },
             diary: {
-                icon: 'dashboard',
+                icon: 'book',
                 title: 'Дневник',
             },
             games: {
-                icon: 'dashboard',
+                icon: 'games',
                 title: 'Игры',
             },
             map: {
-                icon: 'dashboard',
+                icon: 'map',
                 title: 'Карта',
-            },
-            goals: {
-                icon: 'dashboard',
-                title: 'Цели',
             },
         }
     },
-    users: {
-        icon: 'supervisor_account',
-        title: 'Пользователи',
+    statistics: {
+        icon: 'query_stats',
+        title: 'Статистика',
     },
-    about: {
-        icon: 'favorite_border',
-        title: 'О нас',
+    files: {
+        icon: 'drive_file_move',
+        title: 'Файлы',
     },
     settings: {
         icon: 'settings',
