@@ -1,0 +1,12 @@
+.Page {
+	height: 100%;
+
+	// inner scrollbars for the article
+	overflow: auto;
+
+	.feed {
+		margin: auto;
+		max-width: 800px;
+		width: calc(100% - 20px);
+	}
+}

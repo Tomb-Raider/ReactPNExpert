@@ -6,11 +6,14 @@ import reportWebVitals from './reportWebVitals'
 import M from 'materialize-css'
 import {Provider} from 'react-redux'
 import store from './store'
+import {BrowserRouter} from 'react-router-dom'
 
 ReactDOM.render(
 	<React.StrictMode>
 		<Provider store={store}>
-			<AppContainer />
+			<BrowserRouter>
+				<AppContainer />
+			</BrowserRouter>
 		</Provider>
 	</React.StrictMode>,
 	document.getElementById('root')

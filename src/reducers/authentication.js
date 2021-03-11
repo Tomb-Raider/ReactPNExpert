@@ -1,6 +1,6 @@
 const AUTHENTICATE = 'AUTHENTICATE'
 
-function authenticateActionCreator(firstName, lastName, avatar, location) {
+function authenticateAС(firstName, lastName, avatar, location) {
     return {
         type: AUTHENTICATE,
         firstName: firstName,

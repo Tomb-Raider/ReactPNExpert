@@ -49,23 +49,9 @@
             padding: 0;
             margin: 0;
 
-            width: 200px;
+            // width: 200px;
 
             transition: width 100ms ease;
-
-            &.short {
-                width: 0;
-            }
-        }
-
-        &.nested {
-            p {
-                width: 140px;
-
-                &.short {
-                    width: 0;
-                }
-            }
         }
 
         &.collapser::before {
