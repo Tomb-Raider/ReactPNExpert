@@ -1,0 +1,19 @@
+.InfoRows {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .main {
+        font-weight: bold;
+        color: #868686;
+        font-size: 1.1em;
+    }
+
+    .sub {
+        color: #A0A0A0;
+    }
+
+    &.aligned {
+        text-align: center;
+    }
+}

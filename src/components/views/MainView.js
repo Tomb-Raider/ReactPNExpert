@@ -4,6 +4,10 @@ import FloatingBlock from '../widgets/FloatingBlock'
 import Square from '../widgets/Square'
 import CurrentTask from '../widgets/CurrentTask'
 
+import iconTask from '../../images/task.svg'
+import iconJoystick2 from '../../images/joystick_2.svg'
+import iconFile from '../../images/file.svg'
+
 export default class MainView extends Component {
     render() {
         return (
@@ -14,15 +18,17 @@ export default class MainView extends Component {
                             <p className="flow-text">Мероприятия</p>
 
                             <div className="blocks">
-                                <FloatingBlock color="white">
+                                <FloatingBlock color="white" className="activity-block">
                                     <Square>
-                                        Tasks
+                                        <img src={iconTask} />
+                                        <div className="title">Задания</div>
                                     </Square>
                                 </FloatingBlock>
 
-                                <FloatingBlock color="white">
+                                <FloatingBlock color="white" className="activity-block">
                                     <Square>
-                                        Games
+                                        <img src={iconJoystick2} />
+                                        <div className="title">Игры</div>
                                     </Square>
                                 </FloatingBlock>
                             </div>
@@ -31,8 +37,23 @@ export default class MainView extends Component {
                             <p className="flow-text">Система хранения</p>
 
                             <div className="blocks">
-                                <FloatingBlock color="white">
-                                    Files
+                                <FloatingBlock color="white" className="file-block">
+                                    <img src={iconFile} />
+                                    <div className="text-content">
+                                        <div className="title">
+                                            Загруженные файлы
+                                        </div>
+                                        <div className="stats">
+                                            <div className="column">
+                                                <p>15 видео</p>
+                                                <p>27 фотографий</p>
+                                            </div>
+                                            <div className="column">
+                                                <p>10 опросов</p>
+                                                <p>3 документа</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </FloatingBlock>
                             </div>
                         </div>
@@ -48,7 +69,19 @@ export default class MainView extends Component {
                 </div>
 
                 <p className="flow-text">Текущие задачи</p>
-                <CurrentTask />
+
+                <CurrentTask
+                    dateMain="15:00-16:00"
+                    dateSub="После еды"
+                    actionMain="Принять лекарства"
+                    actionSub="Сегодня принять витаминку"
+                />
+
+                <CurrentTask
+                    dateMain="В течение дня"
+                    actionMain="Снять видео №2"
+                    actionSub="Сегодня снять видео вращения кисти"
+                />
 			</div>
         )
     }

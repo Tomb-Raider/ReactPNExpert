@@ -36,7 +36,11 @@ body {
 }
 
 .content {
-	flex-basis: 100%;
+	width: 100vw;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 
 	.controls {
 		width: 100%;

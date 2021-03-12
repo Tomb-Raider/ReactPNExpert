@@ -39,12 +39,15 @@
 }
 
 .white-blocks {
-	flex-basis: 100%;
+	// !!! MARGINS ONLY WORK WITH WIDTH !!!
+	// a fokin hok!!
+	width: #{"calc(60% - min(70px, 8vw))"};
+	// flex-basis: calc(60% - 70px);
+	// margin-right: 70px;
 }
 
 .accent-blocks {
-	flex-basis: calc(50%);
-	margin-left: 70px;
+	flex-basis: calc(40%);
 
 	display: flex;
 	flex-direction: column;
@@ -59,5 +62,86 @@
 	.lower {
 		background-color: $secondary-darker;
 		flex-basis: calc(30% - 15px);
+	}
+}
+
+@mixin title {
+	// font-size: 1.4em;
+	font-size: #{"min(3vw, 1.4em)"};
+	font-weight: bold;
+	color: $secondary-color;
+
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.activity-block {
+	.Square .content {
+		display: flex;
+		flex-direction: column;
+
+		img {
+			height: 100%;
+		}
+
+		.title {
+			@include title;
+
+			margin-top: #{"min(1vw, 15px)"};
+			text-align: center;
+		}
+	}
+}
+
+.file-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	img {
+		max-height: 100%;
+		min-width: 0;
+		margin-right: 15px;
+	}
+
+	.text-content {
+		// because the image to the
+		// right defines a margin
+		// flex-basis: 100%;
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+
+		.title {
+			@include title;
+			text-align: center;
+		}
+
+		.stats {
+			flex-basis: 100%;
+
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+
+			color: #AEAEB0;
+
+			.column {
+				// margin: 0 15px;
+				margin: 0 2%;
+
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 570px) {
+	.file-block img {
+		display: none;
 	}
 }

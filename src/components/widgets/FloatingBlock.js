@@ -6,12 +6,14 @@ export default class FloatingBlock extends Component {
         const style = {}
 
         if (this.props.color) {
-            style['background-color'] = this.props.color
+            style.backgroundColor = this.props.color
         }
+
+        const moreClassNames = this.props.className || ''
 
         return (
             <div
-                className={'FloatingBlock ' + this.props.className}
+                className={'FloatingBlock ' + moreClassNames}
                 style={style}
             >
                 {this.props.children}
