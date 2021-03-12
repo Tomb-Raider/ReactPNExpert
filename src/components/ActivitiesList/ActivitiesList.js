@@ -2,6 +2,13 @@ import { Component } from 'react'
 import './ActivitiesList.scss'
 import M from 'materialize-css'
 
+import iconSquareMessages from '../../images/messages_square.svg'
+import iconSquareFriends from '../../images/friends_square.svg'
+import iconSquareVideo1 from '../../images/video_1_square.svg'
+import iconSquareSurveys from '../../images/surveys_square.svg'
+import iconSquareDiary from '../../images/diary_square.svg'
+import iconSquareJoystick1 from '../../images/joystick_1_square.svg'
+
 class ActivityEntry extends Component {
     handleClick = () => {
         M.toast({ html: "А это пока что не работает :)" })
@@ -31,34 +38,34 @@ export default class ActivitiesList extends Component {
     entries = {
         primary: {
             messages: {
-                icon: 'messages1.svg',
+                icon: iconSquareMessages,
                 upper: 'Сообщения',
                 lower: '+10'
             },
             friends: {
-                icon: 'friends1.svg',
+                icon: iconSquareFriends,
                 upper: 'Друзья',
                 lower: '+1'
             },
         },
         secondary: {
             videos: {
-                icon: 'videos1.svg',
+                icon: iconSquareVideo1,
                 upper: 'Видео',
                 lower: 'Профессионал'
             },
             surveys: {
-                icon: 'surveys1.svg',
+                icon: iconSquareSurveys,
                 upper: 'Опросы',
                 lower: 'Любитель'
             },
             diary: {
-                icon: 'diary1.svg',
+                icon: iconSquareDiary,
                 upper: 'Дневник',
                 lower: 'Профессионал'
             },
             games: {
-                icon: 'joystick1.svg',
+                icon: iconSquareJoystick1,
                 upper: 'Игры',
                 lower: 'Новичок'
             },
@@ -66,11 +73,9 @@ export default class ActivitiesList extends Component {
     }
 
     render() {
-        const iconPrefix = '/accessible/activities/'
-
         const primary = Object.keys(this.entries.primary).map(key =>
             <ActivityEntry
-                icon={iconPrefix + this.entries.primary[key].icon}
+                icon={this.entries.primary[key].icon}
                 upper={this.entries.primary[key].upper}
                 lower={this.entries.primary[key].lower}
                 key={key}
@@ -80,7 +85,7 @@ export default class ActivitiesList extends Component {
 
         const secondary = Object.keys(this.entries.secondary).map(key =>
             <ActivityEntry
-                icon={iconPrefix + this.entries.secondary[key].icon}
+                icon={this.entries.secondary[key].icon}
                 upper={this.entries.secondary[key].upper}
                 lower={this.entries.secondary[key].lower}
                 key={key}
