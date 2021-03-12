@@ -1,0 +1,45 @@
+@import '../../styles/colors';
+
+.LoginView {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .popup {
+        margin: 7% 0;
+
+        width: #{"min(90%, 500px)"};
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 2% 0;
+
+            background: linear-gradient(180deg, $gradient-primary 9.38%, $gradient-secondary 100%);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .comment {
+            margin-top: 10%;
+            // border-top: 1px solid $border-color;
+            // text-align: center;
+            // width: 100%;
+        }
+
+        .secondary-option {
+            color: $secondary-color;
+        }
+    }
+}

@@ -1,8 +1,9 @@
 const AUTHENTICATE = 'AUTHENTICATE'
 
-function authenticateAС(firstName, lastName, avatar, location) {
+function authenticateAС(token, firstName, lastName, avatar, location) {
     return {
         type: AUTHENTICATE,
+        token: token,
         firstName: firstName,
         lastName: lastName,
         avatar: avatar,
@@ -11,6 +12,7 @@ function authenticateAС(firstName, lastName, avatar, location) {
 }
 
 const initialState = {
+    token: null,
     firstName: 'Вероника',
     lastName: 'Малышева',
     avatar: '/accessible/nika.png',
@@ -22,6 +24,7 @@ export default function authenticationReducer(state = initialState, action) {
         case AUTHENTICATE:
             return {
                 ...state,
+                token: action.token,
                 firstName: action.firstName,
                 lastName: action.lastName,
                 avatar: action.avatar,

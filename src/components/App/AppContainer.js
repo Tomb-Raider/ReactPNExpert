@@ -7,6 +7,7 @@ const mapStateToProps = (state) => {
     return {
         leftDrawerOpen: state.drawers.left.open,
         rightDrawerOpen: state.drawers.right.open,
+        isLoggedIn: state.authentication.token != null,
     }
 }
 
