@@ -26,7 +26,10 @@
             top: 20%;
 
             height: 60%;
-            width: 3px;
+            // width: 3px;
+
+            width: 8px;
+            border-radius: 8px 0px 0px 8px;
 
             background-color: transparent;
             transition: background-color 100ms linear;
