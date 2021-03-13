@@ -1,13 +1,10 @@
 const AUTHENTICATE = 'AUTHENTICATE'
 
-function authenticateAС(token, firstName, lastName, avatar, location) {
+export function authenticateAС(token, newValues) {
     return {
+        ...newValues,
         type: AUTHENTICATE,
         token: token,
-        firstName: firstName,
-        lastName: lastName,
-        avatar: avatar,
-        location: location,
     }
 }
 

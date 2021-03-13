@@ -1,9 +1,10 @@
 import { Component } from 'react'
 import './AccountDetails.scss'
+import random from '../../images/random.svg'
 
 export default class AccountDetails extends Component {
     render() {
-        const icon = this.props.icon || 'none'
+        const icon = this.props.icon || random
         const upper = this.props.upper || 'Upper'
         const lower = this.props.lower || 'Lower'
 

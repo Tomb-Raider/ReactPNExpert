@@ -7,7 +7,7 @@ import ActivitiesList from '../ActivitiesList/ActivitiesList'
 import AccountDetailsContainer from '../AccountDetails/AccountDetailsContainer'
 import Page from '../Page/Page'
 import {Switch, Route} from 'react-router-dom'
-import LoginView from '../views/LoginView'
+import LoginViewContainer from '../views/LoginViewContainer'
 import MainView from '../views/MainView'
 
 function getLoginView(props) {
@@ -18,7 +18,7 @@ function getLoginView(props) {
 			</div>
 			<div className="content">
 				<Page>
-					<LoginView />
+					<LoginViewContainer />
 				</Page>
 			</div>
 		</header>

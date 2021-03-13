@@ -4,7 +4,7 @@ import AccountDetails from './AccountDetails'
 const mapStateToProps = (state) => {
     return {
         icon: state.authentication.avatar,
-        upper: state.authentication.firstName + ' ' + state.authentication.lastName,
+        upper: (state.authentication.firstName || 'Кто-то') + ' ' + (state.authentication.lastName || 'Кто-тов'),
         lower: state.authentication.location,
     }
 }
