@@ -6,6 +6,21 @@ import Square from '../widgets/Square'
 
 import defaultIcon from '../../images/task.svg'
 
+class Checkbox extends Component {
+    render() {
+        return (
+            <div className="Checkbox">
+                <FloatingBlock color="white">
+                    <label>
+                        <input type="checkbox" disabled="disabled" checked={this.props.checked || ""} />
+                        <span></span>
+                    </label>
+                </FloatingBlock>
+            </div>
+        )
+    }
+}
+
 export default class CurrentTask extends Component {
     getDateInfoRows = () => {
         if (!this.props.dateMain) {
@@ -43,6 +58,8 @@ export default class CurrentTask extends Component {
 
                 {/* TODO: move to a component */}
                 <div className="checkbox"></div>
+
+                <Checkbox />
             </div>
         )
     }
