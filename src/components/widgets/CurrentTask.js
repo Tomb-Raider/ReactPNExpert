@@ -59,7 +59,7 @@ export default class CurrentTask extends Component {
                 {/* TODO: move to a component */}
                 <div className="checkbox"></div>
 
-                <Checkbox />
+                <Checkbox checked={this.props.completed || false} />
             </div>
         )
     }

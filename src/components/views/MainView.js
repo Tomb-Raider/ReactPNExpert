@@ -78,6 +78,7 @@ export default class MainView extends Component {
                     actionMain="Принять лекарства"
                     actionSub="Сегодня принять витаминку"
                     icon={iconPills}
+                    completed
                 />
 
                 <CurrentTask
