@@ -9,6 +9,7 @@ import Page from '../Page/Page'
 import {Switch, Route} from 'react-router-dom'
 import LoginViewContainer from '../views/LoginViewContainer'
 import MainView from '../views/MainView'
+import TasksView from '../views/TasksView'
 
 function getLoginView(props) {
 	return (
@@ -77,6 +78,11 @@ function getActualApp(props) {
 					<Route path="/main">
 						<Page>
 							<MainView />
+						</Page>
+					</Route>
+					<Route path="/tasks">
+						<Page>
+							<TasksView />
 						</Page>
 					</Route>
 					<Route path="/">

@@ -7,6 +7,8 @@ import CurrentTask from '../widgets/CurrentTask'
 import iconTask from '../../images/task.svg'
 import iconJoystick2 from '../../images/joystick_2.svg'
 import iconFile from '../../images/file.svg'
+import iconPills from '../../images/pills.svg'
+import iconVideo2 from '../../images/video_2.svg'
 
 export default class MainView extends Component {
     render() {
@@ -71,16 +73,18 @@ export default class MainView extends Component {
                 <p className="flow-text">Текущие задачи</p>
 
                 <CurrentTask
-                    dateMain="15:00-16:00"
+                    dateMain="15:00 - 16:00"
                     dateSub="После еды"
                     actionMain="Принять лекарства"
                     actionSub="Сегодня принять витаминку"
+                    icon={iconPills}
                 />
 
                 <CurrentTask
                     dateMain="В течение дня"
                     actionMain="Снять видео №2"
                     actionSub="Сегодня снять видео вращения кисти"
+                    icon={iconVideo2}
                 />
 			</div>
         )

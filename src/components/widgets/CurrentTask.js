@@ -8,7 +8,11 @@ import defaultIcon from '../../images/task.svg'
 
 export default class CurrentTask extends Component {
     getDateInfoRows = () => {
-        const dateMain = this.props.dateMain || 'Когда-то'
+        if (!this.props.dateMain) {
+            return null
+        }
+
+        const dateMain = this.props.dateMain
 
         if (this.props.dateSub) {
             return <InfoRows main={dateMain} sub={this.props.dateSub} className="date" aligned />
@@ -31,7 +35,7 @@ export default class CurrentTask extends Component {
 
                 <Square className="icon">
                     <FloatingBlock color="white">
-                        <img src={defaultIcon} />
+                        <img src={icon} />
                     </FloatingBlock>
                 </Square>
 

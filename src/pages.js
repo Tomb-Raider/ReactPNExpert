@@ -3,7 +3,7 @@ export const PAGES = {
         icon: 'date_range',
         title: 'Главная',
     },
-    goals: {
+    tasks: {
         icon: 'task_alt',
         title: 'Задачи',
     },

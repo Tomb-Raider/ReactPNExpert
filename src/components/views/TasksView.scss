@@ -1,0 +1,41 @@
+@import '../../styles/colors';
+
+.TasksView {
+	.blocks-section {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.upcomming {
+			opacity: .5;
+		}
+
+		.content-section {
+			width: 70%;
+
+			.today {
+				color: #868686;
+			}
+		}
+
+		.accent-blocks {
+			flex-basis: 30%;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+
+			.upper {
+				background-color: $secondary-lighter;
+				flex-basis: #{"min(40vw, 300px)"};
+				margin-top: 40px;
+			}
+
+			.lower {
+				background-color: $secondary-darker;
+				margin-top: #{"min(5vw, 40px)"};
+				flex-basis: #{"min(20vw, 150px)"};
+			}
+		}
+	}
+}
