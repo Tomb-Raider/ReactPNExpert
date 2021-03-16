@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/ReactSandbox/static/css/main.9d07fc44.chunk.css",
+    "main.js": "/ReactSandbox/static/js/main.95940e7b.chunk.js",
+    "main.js.map": "/ReactSandbox/static/js/main.95940e7b.chunk.js.map",
+    "runtime-main.js": "/ReactSandbox/static/js/runtime-main.2450a281.js",
+    "runtime-main.js.map": "/ReactSandbox/static/js/runtime-main.2450a281.js.map",
+    "static/js/2.3012bb90.chunk.js": "/ReactSandbox/static/js/2.3012bb90.chunk.js",
+    "static/js/2.3012bb90.chunk.js.map": "/ReactSandbox/static/js/2.3012bb90.chunk.js.map",
+    "static/js/3.59e1cc2d.chunk.js": "/ReactSandbox/static/js/3.59e1cc2d.chunk.js",
+    "static/js/3.59e1cc2d.chunk.js.map": "/ReactSandbox/static/js/3.59e1cc2d.chunk.js.map",
+    "index.html": "/ReactSandbox/index.html",
+    "static/css/main.9d07fc44.chunk.css.map": "/ReactSandbox/static/css/main.9d07fc44.chunk.css.map",
+    "static/js/2.3012bb90.chunk.js.LICENSE.txt": "/ReactSandbox/static/js/2.3012bb90.chunk.js.LICENSE.txt",
+    "static/media/diary_square.a39b4855.svg": "/ReactSandbox/static/media/diary_square.a39b4855.svg",
+    "static/media/extra_task.590d6408.svg": "/ReactSandbox/static/media/extra_task.590d6408.svg",
+    "static/media/file.c8c44c57.svg": "/ReactSandbox/static/media/file.c8c44c57.svg",
+    "static/media/friends_square.a4206265.svg": "/ReactSandbox/static/media/friends_square.a4206265.svg",
+    "static/media/joystick_1_square.8da313ec.svg": "/ReactSandbox/static/media/joystick_1_square.8da313ec.svg",
+    "static/media/joystick_2.29beb1df.svg": "/ReactSandbox/static/media/joystick_2.29beb1df.svg",
+    "static/media/logo.a913a0c1.svg": "/ReactSandbox/static/media/logo.a913a0c1.svg",
+    "static/media/messages_square.a20c6b8c.svg": "/ReactSandbox/static/media/messages_square.a20c6b8c.svg",
+    "static/media/photo.d8503ef0.svg": "/ReactSandbox/static/media/photo.d8503ef0.svg",
+    "static/media/pills.028bd0d8.svg": "/ReactSandbox/static/media/pills.028bd0d8.svg",
+    "static/media/random.06f15571.svg": "/ReactSandbox/static/media/random.06f15571.svg",
+    "static/media/surveys_square.8413c105.svg": "/ReactSandbox/static/media/surveys_square.8413c105.svg",
+    "static/media/task.95019337.svg": "/ReactSandbox/static/media/task.95019337.svg",
+    "static/media/video_1_square.feaa0f1f.svg": "/ReactSandbox/static/media/video_1_square.feaa0f1f.svg",
+    "static/media/video_2.9b152057.svg": "/ReactSandbox/static/media/video_2.9b152057.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2450a281.js",
+    "static/js/2.3012bb90.chunk.js",
+    "static/css/main.9d07fc44.chunk.css",
+    "static/js/main.95940e7b.chunk.js"
+  ]
+}
