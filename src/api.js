@@ -1,6 +1,6 @@
 const LOG_REQUESTS = true
 
-const API_PREFIX = 'https://cb23cac0f983.ngrok.io/rest-auth/'
+const API_PREFIX = 'https://e3760ab9526d.ngrok.io/rest-auth/'
 
 export class RequestBuilder {
     constructor(endpoint) {
